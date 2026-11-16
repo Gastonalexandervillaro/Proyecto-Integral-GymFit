@@ -1,24 +1,32 @@
-Actividades 
-- Parrino :
-desarrollo de el sistema de Login . register / pantalla de admin(80%) 
-- (Creacion de sus api respectiva)
-- generacion de qr
-- correo para recuperar
-------------------------------------------------------
-### 📝 Estado de Tareas: Vistas de Ejercicios y Dietas
+# 🏋️‍♂️ GymFit — Sistema Integral de Gestión de Gimnasios
 
-**Santiago (Terminado):**
-* ✔️ **Módulo de Rutinas:** Desarrollo del backend (`RoutineController`, `RoutineService`) y la vista frontal (`routines.html`) respetando el diseño base del proyecto.
-* ✔️ **Solución Base de Datos:** Cambié la configuración en `application.properties` para utilizar **H2** (base de datos integrada). Esto soluciona el error de "Access denied" de MySQL al clonar el repositorio en distintas computadoras. El proyecto ahora arranca directo sin instalar nada.
-* ✔️ **Datos de prueba:** Creé un script (`RoutineDataLoader`) que inyecta rutinas de ejemplo automáticamente al levantar el servidor.
-* *Nota técnica:* En el modelo `Routine`, agregué `@Column(name = "routine_day")` a la variable `day` para solucionar un error de sintaxis SQL con palabras reservadas.
+Plataforma web full-stack desarrollada en **Java & Spring Boot** para la administración integral de gimnasios, gestión de socios, control de acceso mediante códigos QR, tienda de productos, planificación de rutinas de entrenamiento y seguimiento nutricional.
 
-**Juan (Pendiente - Módulo de Dietas):**
-Juan, te dejo asignado el módulo de nutrición. Como ya armé la arquitectura para las rutinas, podés seguir exactamente la misma lógica para que te sea más fácil:
-* 🔲 **Backend:** Crear `DietController` y `DietService` para manejar los modelos de `Diet` y `Meal`.
-* 🔲 **Datos Iniciales:** Armar un `DietDataLoader` (podés copiar la estructura del mío) para que tengamos dietas de prueba al abrir la app.
-* 🔲 **Vista:** Crear el archivo `diets.html`. ¡Aprovechá la estructura y las clases CSS que dejé en `routines.html` así mantenemos el mismo estilo visual (fondo oscuro, botones neón) en todo el sistema!
----------------------------------------------------
+---
 
-Gaston 
+## 🚀 Funcionalidades Principales
+
+- **Autenticación y Seguridad**: Registro de usuarios, inicio de sesión con roles diferenciados (Administrador / Socio) y recuperación de contraseña por correo electrónico.
+- **Control de Acceso con QR**: Generación dinámica de códigos QR para validación de socios e ingreso al gimnasio.
+- **Panel de Administración**: Gestión centralizada de usuarios, membresías, productos e inventario.
+- **Módulo de Rutinas y Ejercicios**: Administración y visualización de planes de entrenamiento personalizados por día (`RoutineController`, `RoutineService`, vistas dinámicas).
+- **Módulo de Nutrición y Dietas**: Seguimiento de planes alimentarios y comidas (`DietController`, `DietService`).
+- **Catálogo y Tienda (`ProductController`)**: Gestión de productos e imágenes asociadas dentro de la plataforma.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+- **Backend**: Java 17, Spring Boot, Spring Data JPA, Hibernate, Maven
+- **Frontend**: HTML5, CSS3, JavaScript, Thymeleaf
+- **Base de Datos**: MySQL / H2 Database (configuración integrada para ejecución inmediata sin dependencias externas)
+- **Infraestructura / Contenedores**: Docker (`docker-compose.yml`)
+
+---
+
+## ⚙️ Instalación y Ejecución Local
+
+1. Cloná este repositorio:
+   ```bash
+   git clone [https://github.com/Gastonalexandervillaro/Proyecto-Integral-GymFit.git](https://github.com/Gastonalexandervillaro/Proyecto-Integral-GymFit.git)
 -encargado de crear las vistas actuales , sos un genio de ultima hace de apoyo conmigo en las tareas conmigo o automatizar en su defecto cuando sea necesario 
